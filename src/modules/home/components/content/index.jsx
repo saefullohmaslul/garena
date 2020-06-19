@@ -6,11 +6,12 @@ import ProgramContent from '../program'
 import PartnerUniversityContent from '../university'
 
 import './index.scss'
-import { mapStateToProps, mapDispatchToProps } from './function'
+import { mapDispatchToProps } from './function'
 
-const Content = ({ getContent }) => {
+const Content = ({ getContent, getUniversities }) => {
   useEffect(() => {
     getContent()
+    getUniversities()
   }, [])
 
   return (
@@ -22,4 +23,4 @@ const Content = ({ getContent }) => {
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Content)
+export default connect(null, mapDispatchToProps)(Content)

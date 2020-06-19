@@ -1,18 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import './index.scss'
+
 import Card from '@/global/components/card'
-
-import { freshman } from './data/freshman.data'
-import { senior } from './data/senior.data'
-
 import FreshmanImage from '@/assets/img/icon-freshmen.png'
 import SeniorImage from '@/assets/img/icon-senior.png'
-import { connect } from 'react-redux'
-import { mapStateToProps, mapDispatchToProps } from './function'
+import { mapStateToProps } from './function'
 
 const ProgramContent = ({ contents }) => {
-  console.log(contents.data)
   return (
     <section id="program">
       <div className="title">
@@ -35,8 +31,8 @@ const ProgramContent = ({ contents }) => {
             </div>
           ) : (
             <>
-              <Card data={freshman} image={FreshmanImage} program={contents.data.freshman_program} />
-              <Card data={senior} image={SeniorImage} program={contents.data.senior_program} />
+              <Card title="Sea Freshman Scholarship Program" image={FreshmanImage} program={contents.data.freshman_program} />
+              <Card title="Sea Senior Scholarship Program" image={SeniorImage} program={contents.data.senior_program} />
             </>
           )}
         </div>
@@ -45,4 +41,4 @@ const ProgramContent = ({ contents }) => {
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProgramContent)
+export default connect(mapStateToProps, null)(ProgramContent)

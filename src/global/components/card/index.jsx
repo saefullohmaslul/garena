@@ -3,12 +3,12 @@ import parser from 'html-react-parser'
 
 import './index.scss'
 
-const Card = ({ data, image, program }) => {
+const Card = ({ title, image, program }) => {
   return (
     <div className="card">
-      <img src={image} alt={data.title} />
+      <img src={image} alt={title} />
 
-      {data.title ? <p className="card-title">{data.title}</p> : null}
+      <p className="card-title">{title}</p>
 
       <div className="card-body">{program ? parser(program) : null}</div>
     </div>

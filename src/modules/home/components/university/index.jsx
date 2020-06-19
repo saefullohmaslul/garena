@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.scss'
 
-import Slider from '@/global/components/slider'
+import UniversitySlider from '../university-slider'
 
 const PartnerUniversityContent = () => {
   return (
@@ -13,7 +13,7 @@ const PartnerUniversityContent = () => {
         <p>Partner Universities</p>
       </div>
       <div className="slider">
-        <Slider />
+        <UniversitySlider />
       </div>
     </section>
   )

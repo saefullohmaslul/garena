@@ -1,13 +1,9 @@
 import { getContent } from '@/redux/actions/content.action'
-
-export const mapStateToProps = state => {
-  return {
-    contents: state.contents
-  }
-}
+import { getUniversities } from '@/redux/actions/university.action'
 
 export const mapDispatchToProps = dispatch => {
   return {
-    getContent: payload => dispatch(getContent(payload))
+    getContent: payload => dispatch(getContent(payload)),
+    getUniversities: payload => dispatch(getUniversities(payload))
   }
 }

@@ -1,23 +1,24 @@
 const initialState = {
-  data: {},
+  data: [],
   isLoading: false
 }
 
-const contents = (state = initialState, actions) => {
+const universities = (state = initialState, actions) => {
   switch (actions.type) {
-    case 'content/GET_DATA_PENDING':
+    case 'university/GET_DATA_PENDING':
       return {
         ...state,
         isLoading: true
       }
-    case 'content/GET_DATA_FULFILLED':
+    case 'university/GET_DATA_FULFILLED':
       return {
         ...state,
-        data: actions.payload.data.data[0],
+        data: actions.payload.data.data,
         isLoading: false
       }
     default:
       return state
   }
 }
-export default contents
+
+export default universities
