@@ -12,7 +12,7 @@ import SeniorImage from '@/assets/img/icon-senior.png'
 const ProgramContent = () => {
   return (
     <section id="program">
-      <div className="program-title">
+      <div className="title">
         <p>Undergraduate Scholarship Program</p>
       </div>
       <div className="program-content">

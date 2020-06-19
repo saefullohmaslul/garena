@@ -2,6 +2,7 @@ import React from 'react'
 
 import HomeContent from '../home'
 import ProgramContent from '../program'
+import PartnerUniversityContent from '../university'
 
 import './index.scss'
 
@@ -10,6 +11,7 @@ const Content = () => {
     <div className="content-container">
       <HomeContent />
       <ProgramContent />
+      <PartnerUniversityContent />
     </div>
   )
 }

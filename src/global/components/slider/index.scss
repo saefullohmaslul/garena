@@ -1,0 +1,21 @@
+.university-info {
+  p {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-family: 'Avenir LT Black', sans-serif;
+    font-weight: 700;
+  }
+
+  ul {
+    font-size: 0.85em;
+    list-style: none;
+    margin-left: 1.85rem;
+    margin-right: 1rem;
+
+    li {
+      text-indent: -1.85rem;
+      line-height: 1.5rem;
+    }
+  }
+}
