@@ -20,3 +20,16 @@
     line-height: 1.75rem;
   }
 }
+
+.program-content-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 425px) {
+  .program-content-items {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+}

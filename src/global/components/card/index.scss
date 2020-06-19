@@ -1,0 +1,63 @@
+.card {
+  width: 48.5%;
+  margin: 2em 0;
+  padding: 1.5em 0;
+  background-color: #fff;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.4);
+
+  img {
+    margin: 0 auto;
+    height: 8em;
+  }
+}
+
+.card-title {
+  text-align: center;
+  color: #010184;
+  font-family: 'Avenir LT Black', sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 2rem 2rem 1rem;
+}
+
+.card-body {
+  padding: 0 2.5rem;
+  margin-top: 0.8em;
+
+  p {
+    text-align: justify;
+    line-height: 1.75rem;
+  }
+}
+
+.card-desc-title {
+  font-weight: bold;
+}
+
+.card-desc-detail {
+  list-style: none;
+  margin: 0 1vw;
+
+  li {
+    margin: 0.65rem;
+    text-indent: -1.85rem;
+    line-height: 1.5rem;
+  }
+}
+
+ul li:before {
+  content: '-';
+  margin-left: 1rem;
+  margin-right: 0.45rem;
+}
+
+.benefit {
+  margin-top: 2em;
+}
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 90%;
+    margin: 1em auto;
+  }
+}

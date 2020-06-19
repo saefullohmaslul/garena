@@ -1,6 +1,13 @@
 import React from 'react'
 
 import './index.scss'
+import Card from '@/global/components/card'
+
+import { freshman } from './data/freshman.data'
+import { senior } from './data/senior.data'
+
+import FreshmanImage from '@/assets/img/icon-freshmen.png'
+import SeniorImage from '@/assets/img/icon-senior.png'
 
 const ProgramContent = () => {
   return (
@@ -17,8 +24,8 @@ const ProgramContent = () => {
           </p>
         </div>
         <div className="program-content-items">
-          <div className="card-item"></div>
-          <div className="card-item"></div>
+          <Card data={freshman} image={FreshmanImage} />
+          <Card data={senior} image={SeniorImage} />
         </div>
       </div>
     </section>
