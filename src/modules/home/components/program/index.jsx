@@ -8,8 +8,11 @@ import { senior } from './data/senior.data'
 
 import FreshmanImage from '@/assets/img/icon-freshmen.png'
 import SeniorImage from '@/assets/img/icon-senior.png'
+import { connect } from 'react-redux'
+import { mapStateToProps, mapDispatchToProps } from './function'
 
-const ProgramContent = () => {
+const ProgramContent = ({ contents }) => {
+  console.log(contents.data)
   return (
     <section id="program">
       <div className="title">
@@ -17,19 +20,29 @@ const ProgramContent = () => {
       </div>
       <div className="program-content">
         <div className="program-content-desc">
-          <p>
-            We are excited to announce that Sea Indonesia is now partnering with five universities in Indonesia and offering a merit-based scholarship to bright Indonesian students. This scholarship
-            is our commitment to give back to the community by empowering youth through education. Through this scholarship, we hope to provide talented students with the opportunity to pursue a
-            bachelor’s degree and solve the talent-gap issue in the technology industry in Indonesia.
-          </p>
+          {contents.isLoading ? (
+            <div>
+              <p>Loading</p>
+            </div>
+          ) : (
+            <p>{contents.data.program_content}</p>
+          )}
         </div>
         <div className="program-content-items">
-          <Card data={freshman} image={FreshmanImage} />
-          <Card data={senior} image={SeniorImage} />
+          {contents.isLoading ? (
+            <div>
+              <p>Loading</p>
+            </div>
+          ) : (
+            <>
+              <Card data={freshman} image={FreshmanImage} program={contents.data.freshman_program} />
+              <Card data={senior} image={SeniorImage} program={contents.data.senior_program} />
+            </>
+          )}
         </div>
       </div>
     </section>
   )
 }
 
-export default ProgramContent
+export default connect(mapStateToProps, mapDispatchToProps)(ProgramContent)

@@ -28,21 +28,29 @@
       font-weight: 700;
       align-items: center;
     }
-
-    .home-info-desc {
-      margin-top: 1em;
-      margin-bottom: 2em;
-      text-align: justify;
-
-      p {
-        font-size: 1em;
-        margin: 1em 2em 5% 0;
-        font-weight: 700;
-      }
-    }
   }
 
   .home-img {
     width: 100vw;
+  }
+}
+
+.home-info-desc {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-align: justify;
+
+  p {
+    font-size: 1em;
+    margin: 1em 2em 5% 0;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .home-info-desc {
+    p {
+      font-size: 0.8em;
+    }
   }
 }

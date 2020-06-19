@@ -1,19 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
 
 import '@/index.scss'
-import App from '@/app'
 
-const history = createBrowserHistory()
+import ContainerRedux from './container.redux'
 
 const Index = () => {
-  return (
-    <Router history={history}>
-      <App />
-    </Router>
-  )
+  return <ContainerRedux />
 }
 
 ReactDOM.render(<Index />, document.getElementById('root'))
