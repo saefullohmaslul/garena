@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Header from '@/global/components/header'
+
 const Home = () => {
   return (
     <>
-      <p>Hello</p>
+      <Header />
     </>
   )
 }
