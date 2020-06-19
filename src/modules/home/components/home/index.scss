@@ -1,0 +1,48 @@
+#home {
+  background-image: url('../../../../assets/img/BG-Head.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  height: 55vw;
+  padding-left: 12vw;
+  padding-right: 7vw;
+  position: relative;
+  color: #fff;
+  font-size: 1rem;
+
+  .home-container {
+    position: relative;
+    top: 25%;
+    transform: translateY(-25%);
+    align-items: center;
+    padding-top: 5vw;
+  }
+}
+
+.home-container {
+  .home-info {
+    flex-grow: 1;
+    flex-direction: column;
+
+    .home-info-title {
+      font-weight: 700;
+      align-items: center;
+    }
+
+    .home-info-desc {
+      margin-top: 1em;
+      margin-bottom: 2em;
+      text-align: justify;
+
+      p {
+        font-size: 1em;
+        margin: 1em 2em 5% 0;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .home-img {
+    width: 100vw;
+  }
+}
