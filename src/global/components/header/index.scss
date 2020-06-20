@@ -1,9 +1,11 @@
 header {
   position: relative;
   font-size: 1rem;
+  width: 100vw;
 }
 
 .header-container {
+  position: fixed;
   z-index: 999;
   top: 0;
   width: inherit;
