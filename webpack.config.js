@@ -61,5 +61,8 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'views', 'index.html')
     }),
     new Dotenv()
-  ]
+  ],
+  node: {
+    fs: "empty"
+  }
 }
