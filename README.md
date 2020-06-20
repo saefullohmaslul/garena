@@ -1,5 +1,7 @@
 # GARENA
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef8d92be-3a19-4d1b-9fc1-f37522552884/deploy-status)](https://app.netlify.com/sites/agitated-shockley-fa850c/deploys)
+
 ## Sea Scholarship 2019
 
 Sea Scholarship is project for my application in Garena Indonesia
