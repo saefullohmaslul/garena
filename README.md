@@ -47,4 +47,4 @@ And goto dist folder, it will bundle all you need.
 
 ## Demo
 
-Goto this [link to see the demo](https://5eeda3b0ee3a4317a263925e--agitated-shockley-fa850c.netlify.app/)
+Goto this [link to see the demo](https://agitated-shockley-fa850c.netlify.app/)
