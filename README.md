@@ -16,10 +16,10 @@ Full preview in [here](https://github.com/saefullohmaslul/garena/blob/master/src
 
 ## Feature
 
-[x] SPA (using React)
-[x] SCSS
-[x] Webpack
-[x] Redux
+- [x] SPA (using React)
+- [x] SCSS
+- [x] Webpack
+- [x] Redux
 
 ## Instalation
 
