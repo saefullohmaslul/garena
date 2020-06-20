@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 576px) {
   .program-content-items {
     flex-direction: column;
     margin-top: 1em;
