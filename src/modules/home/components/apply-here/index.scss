@@ -1,0 +1,26 @@
+#apply-here {
+  background-image: url('../../../../assets/img/BG-Apply.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 20%;
+  height: 55vw;
+  padding: 0 12vw;
+  font-size: 1.5rem;
+  position: relative;
+}
+.apply-here-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+
+  p {
+    color: #fff;
+    font-size: 3vw;
+    padding-bottom: 0.3em;
+    font-weight: 700;
+    font-family: 'Avenir LT Black', sans-serif;
+  }
+}

@@ -9,6 +9,7 @@ import './index.scss'
 import { mapDispatchToProps } from './function'
 import TimelineContent from '../timeline'
 import TestimonialContent from '../testimonial'
+import ApplyHereContent from '../apply-here'
 
 const Content = ({ getContent, getUniversities, getFaculties, getTestimonials }) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Content = ({ getContent, getUniversities, getFaculties, getTestimonials })
       <PartnerUniversityContent />
       <TimelineContent />
       <TestimonialContent />
+      <ApplyHereContent />
     </div>
   )
 }
