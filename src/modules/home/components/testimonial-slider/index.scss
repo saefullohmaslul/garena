@@ -1,0 +1,37 @@
+.testimonial {
+  font-size: 0.8em;
+}
+
+.testimonial-img {
+  width: 30%;
+  margin-left: 2vw;
+  margin-right: 1vw;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.testimonial-desc {
+  width: 60%;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: center;
+  align-self: center;
+  margin: 0 3em;
+  line-height: 1.8em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.testimonial-content {
+  font-style: italic;
+}
+
+.testimonial-person {
+  margin-top: 0.7em;
+  font-family: 'Avenir LT Black', sans-serif;
+  font-weight: 700;
+  color: #484848;
+}

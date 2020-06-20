@@ -8,6 +8,7 @@ import PartnerUniversityContent from '../university'
 import './index.scss'
 import { mapDispatchToProps } from './function'
 import TimelineContent from '../timeline'
+import TestimonialContent from '../testimonial'
 
 const Content = ({ getContent, getUniversities, getFaculties }) => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Content = ({ getContent, getUniversities, getFaculties }) => {
       <ProgramContent />
       <PartnerUniversityContent />
       <TimelineContent />
+      <TestimonialContent />
     </div>
   )
 }
