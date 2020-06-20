@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 
 import 'slick-carousel/slick/slick.css'
@@ -7,10 +7,15 @@ import './index.scss'
 
 import { PrevArrow, NextArrow } from '@/global/components/arrow'
 import { connect } from 'react-redux'
-import { mapStateToProps } from './function'
+import { mapStateToProps, mergeArray } from './function'
 
-const CustomSlider = ({ universities }) => {
-  console.log(universities.data)
+const CustomSlider = ({ universities, faculties }) => {
+  const [dataUnivAndFaculties, setDataUnivAndFaculties] = useState([])
+
+  useEffect(() => {
+    setDataUnivAndFaculties(mergeArray(universities.data, faculties.data))
+  }, [universities, faculties])
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -22,36 +27,32 @@ const CustomSlider = ({ universities }) => {
 
   return (
     <Slider {...settings}>
-      {universities.isLoading ? (
+      {dataUnivAndFaculties.length < 0 ? (
         <div>
           <p>Loading</p>
         </div>
       ) : (
-        universities.data.map(university => {
+        dataUnivAndFaculties.map(universityAndFaculties => {
           return (
-            <div key={university.id} className="university-container">
+            <div key={universityAndFaculties.id} className="university-container">
               <div className="university is-flex">
                 <div className="university-logo">
-                  <img src={university.univ_logo} alt={university.univ_name} />
+                  <img src={universityAndFaculties.univ_logo} alt={universityAndFaculties.univ_name} />
                 </div>
                 <div className="university-info">
                   <div className="university-name">
-                    <p>{university.univ_name}</p>
+                    <p>{universityAndFaculties.univ_name}</p>
                   </div>
                   <div className="university-faculty is-flex">
-                    <ul>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                    </ul>
-                    <ul>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                      <li>Fakultas A</li>
-                    </ul>
+                    {universityAndFaculties.faculties.map((section, index) => {
+                      return (
+                        <ul key={index}>
+                          {section.map(faculty => {
+                            return <li key={faculty.id}>{faculty.name}</li>
+                          })}
+                        </ul>
+                      )
+                    })}
                   </div>
                 </div>
               </div>

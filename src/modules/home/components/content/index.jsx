@@ -8,10 +8,11 @@ import PartnerUniversityContent from '../university'
 import './index.scss'
 import { mapDispatchToProps } from './function'
 
-const Content = ({ getContent, getUniversities }) => {
+const Content = ({ getContent, getUniversities, getFaculties }) => {
   useEffect(() => {
     getContent()
     getUniversities()
+    getFaculties()
   }, [])
 
   return (
