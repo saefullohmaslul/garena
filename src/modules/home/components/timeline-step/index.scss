@@ -27,3 +27,11 @@
   width: 5vw;
   border-bottom: 0.25rem solid #ddd;
 }
+
+@media only screen and (max-width: 425px) {
+  .divider {
+    right: -3.5vw;
+    bottom: 12.5vw;
+    width: 7vw;
+  }
+}

@@ -4,8 +4,10 @@ import Slider from 'react-slick'
 import './index.scss'
 
 import { PrevArrow, NextArrow } from '@/global/components/arrow'
+import { connect } from 'react-redux'
+import { mapStateToProps } from './function'
 
-const TestimonialSlider = () => {
+const TestimonialSlider = ({ testimonials }) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -17,26 +19,33 @@ const TestimonialSlider = () => {
 
   return (
     <Slider {...settings}>
-      <div className="testimonial-container">
-        <div className="testimonial is-flex">
-          <div className="testimonial-img">
-            <img src="https://web.cdn.id.garenanow.com/webid/scholarship/Ivan-UI.png" alt="person" />
-          </div>
-          <div className="testimonial-desc is-flex">
-            <div className="testimonial-content">
-              <p>
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti magni quas quod minus nobis ipsa praesentium molestiae? Soluta sequi temporibus labore doloribus ea esse veritatis
-                aperiam perferendis. Aspernatur, doloremque!"
-              </p>
-            </div>
-            <div className="testimonial-person">
-              <p>Saefulloh Maslul</p>
-            </div>
-          </div>
+      {testimonials.isLoading ? (
+        <div>
+          <p>Loading</p>
         </div>
-      </div>
+      ) : (
+        testimonials.data.map(testimonial => {
+          return (
+            <div key={testimonial.id} className="testimonial-container">
+              <div className="testimonial is-flex">
+                <div className="testimonial-img">
+                  <img src={testimonial.image} alt="person" />
+                </div>
+                <div className="testimonial-desc is-flex">
+                  <div className="testimonial-content">
+                    <p>{testimonial.story}</p>
+                  </div>
+                  <div className="testimonial-person">
+                    <p>{testimonial.name}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      )}
     </Slider>
   )
 }
 
-export default TestimonialSlider
+export default connect(mapStateToProps, null)(TestimonialSlider)

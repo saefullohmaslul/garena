@@ -10,11 +10,12 @@ import { mapDispatchToProps } from './function'
 import TimelineContent from '../timeline'
 import TestimonialContent from '../testimonial'
 
-const Content = ({ getContent, getUniversities, getFaculties }) => {
+const Content = ({ getContent, getUniversities, getFaculties, getTestimonials }) => {
   useEffect(() => {
     getContent()
     getUniversities()
     getFaculties()
+    getTestimonials()
   }, [])
 
   return (

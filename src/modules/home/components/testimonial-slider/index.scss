@@ -1,5 +1,6 @@
 .testimonial {
   font-size: 0.8em;
+  padding: 0 1.5em;
 }
 
 .testimonial-img {
@@ -34,4 +35,27 @@
   font-family: 'Avenir LT Black', sans-serif;
   font-weight: 700;
   color: #484848;
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonial {
+    font-size: 1.2em;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .testimonial-img {
+    width: 100%;
+    margin: 0;
+  }
+  .testimonial-desc {
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .testimonial {
+    height: 60rem;
+  }
 }

@@ -11,6 +11,16 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .content-container {
+    section {
+      .title {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
 .slider {
   width: 75vw;
   margin: 0 auto;
